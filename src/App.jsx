@@ -1,10 +1,12 @@
 import React from 'react'
-import {FlexContent, Hero,Sales, Stroies} from './components'
-import { heroapi,popularsales,sneaker,toprateslaes, highlight, story} from './data/data.js'
+import {FlexContent, Hero,Sales, Stroies,Navbar} from './components'
+import Footer from './components/Footer'
+import { heroapi,popularsales,sneaker,toprateslaes, highlight, story, footerAPI} from './data/data.js'
 const App = () => {
   return (
 
 <>
+
 <main className='flex flex-col gap-16 relative'>
         <Hero heroapi={heroapi} />
         <Sales endpoint={popularsales} ifExists />
@@ -13,6 +15,7 @@ const App = () => {
         <FlexContent endpoint={sneaker} />
         <Stroies story={story}/>
 </main>
+<Footer footerAPI = {footerAPI}/>
 </>
   )
 }
