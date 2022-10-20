@@ -1,14 +1,17 @@
 import React from 'react'
-import {Hero,Sales} from './components'
-import { heroapi,popularsales,toprateslaes } from './data/data.js'
+import {FlexContent, Hero,Sales, Stroies} from './components'
+import { heroapi,popularsales,sneaker,toprateslaes, highlight, story} from './data/data.js'
 const App = () => {
   return (
 
 <>
-<main>
-  <Hero heroapi={heroapi}/>
-  <Sales endpoint={popularsales}/>
-  <Sales endpoint={toprateslaes}/>
+<main className='flex flex-col gap-16 relative'>
+        <Hero heroapi={heroapi} />
+        <Sales endpoint={popularsales} ifExists />
+        <FlexContent endpoint={highlight} ifExists />
+        <Sales endpoint={toprateslaes} />
+        <FlexContent endpoint={sneaker} />
+        <Stroies story={story}/>
 </main>
 </>
   )
