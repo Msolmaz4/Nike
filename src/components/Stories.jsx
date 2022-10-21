@@ -1,12 +1,12 @@
-import React from 'react'
-import Title from './utils/Title'
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
+import React from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import '@splidejs/splide/css';
 import { HashtagIcon, HeartIcon } from "@heroicons/react/24/solid";
 import { ClockIcon } from "@heroicons/react/24/outline";
+import Title from "./utils/Title";
 import { truncate } from "lodash";
 
-const Stroies = ({ story: { title, news }}) => {
+const Stories = ({ story: { title, news } }) => {
     const splideOptions = {
         perPage: 4,
         perMove: 1,
@@ -22,9 +22,10 @@ const Stroies = ({ story: { title, news }}) => {
           768: { perPage: 2},
           500: { perPage: 1.3},
           425: { perPage: 1},
-        }, };
+        },
+      };
   return (
-  <>
+    <>
       <div className="nike-container mb-11">
         <Title title={title} />
         <div className="mt-7">
@@ -68,8 +69,6 @@ const Stroies = ({ story: { title, news }}) => {
       </div>
     </>
   );
- 
-  
-}
+};
 
-export default Stroies
+export default Stories;
